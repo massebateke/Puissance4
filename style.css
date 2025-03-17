@@ -1,0 +1,71 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #860eb1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .container {
+    text-align: center;
+  }
+  
+  .board {
+        display: grid;
+        gap: 5px;
+      }
+  
+  .cell {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    background-color: lightgrey;
+    margin: 2px;
+    border-radius: 50%;
+    position: relative;
+    transition: background-color 0.3s;
+  }
+  
+  .fall {
+    animation: fall 0.5s ease-in-out forwards;
+  }
+  
+  @keyframes fall {
+    from {
+      top: -60px;
+      opacity: 0;
+    }
+    to {
+      top: 0;
+      opacity: 1;
+    }
+  }
+  
+  
+  .red {
+    background-color: red;
+  }
+  
+  .yellow {
+    background-color: yellow;
+  }
+  
+  .status, .winner {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  
+  button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #ddd;
+  }
+  
